@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "95fdfdde-064e-4709-bcd7-d2ffdfd83a01",
+		"name": "aws predefine url",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28535785",
+		"_collection_link": "https://crimson-escape-716507.postman.co/workspace/Team-Workspace~d13a90b1-9968-4077-8cf5-55872986d562/collection/28535785-95fdfdde-064e-4709-bcd7-d2ffdfd83a01?action=share&source=collection_link&creator=28535785"
+	},
+	"item": [
+		{
+			"name": "root",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get upload url",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/get-upload-url",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-upload-url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "use the predefined url to post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/D:/S3 Upload projects/presigned video upload and streaming/example.mp4"
+					}
+				},
+				"url": {
+					"raw": "https://sfl360project.s3.ap-south-1.amazonaws.com/videos/1707480574102.mp4?Content-Type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAV36FEPTRTG2IS42S%2F20240209%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T120934Z&X-Amz-Signature=05e2714a720da4420bbaa06ec386cbe71c694a3f430723abe16e68f2133f473f",
+					"protocol": "https",
+					"host": [
+						"sfl360project",
+						"s3",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"videos",
+						"1707480574102.mp4"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "video%2Fmp4"
+						},
+						{
+							"key": "X-Amz-Algorithm",
+							"value": "AWS4-HMAC-SHA256"
+						},
+						{
+							"key": "X-Amz-Expires",
+							"value": "900"
+						},
+						{
+							"key": "Content-Type",
+							"value": "video/mp4",
+							"disabled": true
+						},
+						{
+							"key": "X-Amz-SignedHeaders",
+							"value": "host"
+						},
+						{
+							"key": "X-Amz-Credential",
+							"value": "AKIAV36FEPTRTG2IS42S%2F20240209%2Fap-south-1%2Fs3%2Faws4_request"
+						},
+						{
+							"key": "X-Amz-Date",
+							"value": "20240209T120934Z"
+						},
+						{
+							"key": "X-Amz-Signature",
+							"value": "05e2714a720da4420bbaa06ec386cbe71c694a3f430723abe16e68f2133f473f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get stream video",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/stream-video/1707480574102.mp4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"stream-video",
+						"1707480574102.mp4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get stream video Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://sfl360.s3.ap-south-1.amazonaws.com/videos/1702907351827.mp4",
+					"protocol": "https",
+					"host": [
+						"sfl360",
+						"s3",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"videos",
+						"1702907351827.mp4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
